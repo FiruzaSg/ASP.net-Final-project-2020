@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace Repository.Models
 {
@@ -10,7 +10,11 @@ namespace Repository.Models
         public bool Status { get; set; }
         public DateTime AddedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
+
+        [Required]
         public string AddedBy { get; set; }
+
+        [Required]
         public string ModifiedBy { get; set; }
 
     }

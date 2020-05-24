@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace Repository.Models
 {
     public class Label : BaseEntity
     {
+        [Required]
+        [MaxLength(50)]
         public string Text { get; set; }
+
+        [Required]
+        [MaxLength(50)]
         public string Color { get; set; }
         public ICollection<BestPlan> BestPlans { get; set; }
     }

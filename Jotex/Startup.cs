@@ -26,11 +26,10 @@ namespace Jotex
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+             
             services.AddDbContext<JotexDbContext>(options => 
                      options.UseSqlServer(Configuration.GetConnectionString("Default"),
-                     x => x.MigrationsAssembly("Repository")
-
-            ));
+                     x => x.MigrationsAssembly("Repository")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
